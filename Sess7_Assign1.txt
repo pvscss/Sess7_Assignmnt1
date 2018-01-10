@@ -1,0 +1,17 @@
+Task 1:
+par(mar=c(1,1,1,1))  -- Number of lines of margin
+par(mfrow=c(3,4))    
+for(i in 1:ncol(mtcars)) { hist(mtcars[,i],main=names(mtcars)[i])}
+
+Task 2:
+library(lattice)
+data(mtcars)
+par(mfrow=c(3,4))
+for(i in 1:ncol(mtcars)){
+plot(density(mtcars[,i]),main=names(mtcars)[i])
+}
+
+Task 3:
+par(mfrow=c(3,4))
+for(i in 1:ncol(mtcars)){
+boxplot(mtcars[,i],main=names(mtcars)[i]) }
